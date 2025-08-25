@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "create-prisma-app"
-version = "0.1.0"
+version = "0.4.0"
 description = "A CLI tool to bootstrap Express + Prisma projects with PostgreSQL"
 authors = [{ name = "Sahil K Gupta", email = "sahilkguptaprivate@gmail.com" }]
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
 requires-python = ">=3.8"
 dependencies = []
 
