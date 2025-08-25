@@ -175,7 +175,7 @@ describe("Health check", () => {
 def setup_node_dependencies(project_name):
     os.chdir(project_name)
     print("📦 Installing dependencies...")
-    subprocess.run(["npm", "install", "express", "@prisma/client"], check=True)
+    subprocess.run(["npm", "install", "express", "prisma", "@prisma/client"], check=True)
     subprocess.run(["npm", "install", "--save-dev", "jest", "supertest", "dotenv"], check=True)
 
     if not Path("prisma").exists():
@@ -218,6 +218,8 @@ def main():
     check_installation("npm", ["sudo", "apt", "install", "-y", "npm"])
     check_installation("psql", ["sudo", "apt", "install", "-y", "postgresql-client"])
     check_installation("prisma", ["sudo", "npm", "install", "-g", "prisma"])
+    check_installation("psql", ["sudo", "apt", "install", "-y", "postgresql", "postgresql-contrib"]
+)
 
     # Postgres
     setup_postgres(args.db_name, args.db_user, args.db_pass)
